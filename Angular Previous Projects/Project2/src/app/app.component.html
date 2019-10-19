@@ -1,0 +1,25 @@
+<body>
+  <div style = "text-align:center">
+    <h1>
+       Welcome to {{title}}.
+    </h1>
+ </div>
+ <div> Months :
+    <select (change) = "changemonths($event)" name = "month">
+       <option *ngFor = "let i of months">{{i}}</option>
+    </select>
+ </div>
+ <br/>
+ <div>
+    <span *ngIf = "isavailable">Condition in valid.</span>  
+    
+      
+ </div>
+ <form method="POST" action="" name="form1">
+    UserName:<input type="text" name="UserName"><br>
+    Password:<input type="password" name="Password"><br>
+    <button class="button" type="submit">Purchase</button>
+
+    <input type="submit" value="Login"><input type="reset" value="Cancel">
+ </form>
+</body>

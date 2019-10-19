@@ -1,0 +1,12 @@
+body{
+    color:rgb(56, 195, 230);
+    background-color:rgb(199, 199, 235);
+}
+form{
+    position: relative;
+    background-position: 20%;
+    border-left:500px;
+    text-align: center;
+}
+
+

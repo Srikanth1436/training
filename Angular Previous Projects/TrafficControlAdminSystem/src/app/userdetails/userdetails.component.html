@@ -1,0 +1,38 @@
+
+<div class="bs-example">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a routerLink='/home' class="navbar-brand">Home</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a routerLink='/user' class="nav-item nav-link">Create User</a>
+                <a routerLink='/incident' class="nav-item nav-link">Generate Incident</a>
+               <a routerLink='/userdetails' style="color: blue;" class="nav-item nav-link active">View Users</a>
+               <a routerLink='/incidentdetails' class="nav-item nav-link disabled" >View Incidents</a>
+            </div>
+            
+        </div>
+    </nav>
+</div>
+<!--<button routerLink="/home" class="btn btn-primary">Home</button>-->
+<h2>All User Details</h2><br>
+<table>
+        <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>License Id</th>
+        <th>Phone Number</th>
+        <th>No.of Incidents</th>
+        </tr>
+        <tr *ngFor="let d of data">
+            <td>{{d.id}}</td>
+            <td>{{d.name}}</td>
+            <td>{{d.licence}}</td>
+            <td>{{d.phone}}</td>
+            <td>0</td>
+        </tr>
+    </table>
+ 

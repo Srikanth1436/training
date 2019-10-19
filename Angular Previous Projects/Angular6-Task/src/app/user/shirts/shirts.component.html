@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg ">
+    <div class=" navbar-collapse " >
+    
+    <a class="nav-item nav-link active" routerLink='/user/dashboard' >Home&#X2302;</a>
+    <a class="nav-item nav-link"routerLink='/user/cart'>Cart&#128722;</a>
+    <a class="nav-item nav-link" routerLink='/user/orders'>Orders&#9776;</a>
+    </div>
+    
+    </nav>
+    <br>
+    <br>
+    <h2>Shirt Items </h2>
+    <div class="jumbotron">
+<div class="container">
+  <div class="row">
+    <table>
+      <tr>
+        <th>S.no</th>
+        <th>Brand Name</th>
+        <th>Sizes</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Choose</th>
+      </tr>
+      <tr *ngFor="let lp of shirts;index as i">
+<td>{{i+1}}</td>
+<td>{{lp.brand}}</td>
+<td>{{lp.size}}</td>
+<td>{{lp.price}}</td>
+<td>{{lp.description}}</td>
+<td><button  (click)="pur(lp)" class="btn btn-primary btn-sm">Purchase</button></td>
+
+      </tr>
+    </table>
+
+
+    <br><br>
+
+    <table>
+        <tr>
+         
+        <th>S.no</th>
+        <th>Brand Name</th>
+        <th>Sizes</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Choose</th>
+        </tr>
+        <tr *ngFor="let lp of shirts;index as i">
+  <td>{{i+1}}</td>
+  <td>{{lp.brand}}</td>
+  <td>{{lp.size}}</td>
+  <td>{{lp.price}}</td>
+  <td>{{lp.description}}</td>
+  <td><button (click)="pur(lp)" class="btn btn-primary btn-sm">Purchase</button></td>
+  
+        </tr>
+      </table>
+      
+    </div>
+  </div>
+</div>

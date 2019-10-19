@@ -1,0 +1,51 @@
+<div class="jumbotron">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">  
+          <form [formGroup]="items" (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                  <label>Item Name</label>
+                  <input type="text" formControlName="name" class="form-control" [ngClass]="{'is-invalid': submitted && f.name.errors}"/>
+                  <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                    <div *ngIf="f.name.errors.required">Enter Item Name</div>
+                  </div>
+                </div> 
+          <div class="form-group">
+            <label>Brand</label>
+            <input type="text" formControlName="brand" class="form-control" [ngClass]="{'is-invalid':submitted && f.brand.errors}"/>
+              <div *ngIf="submitted && f.brand.errors" class="invalid-feedback">
+                <div *ngIf="f.brand.errors.required">Enter Brand Name</div>
+                
+              </div>
+          </div> 
+          <div class="form-group">
+              <label>Size</label>
+              <input type="text" formControlName="size" class="form-control" [ngClass]="{'is-invalid': submitted && f.size.errors}"/>
+              <div *ngIf="submitted && f.size.errors" class="invalid-feedback">
+                <div *ngIf="f.size.errors.required">Enter Size</div>
+              </div>
+            </div>
+          <div class="form-group">
+            <label>Price</label>
+            <input type="number" formControlName="price" class="form-control" [ngClass]="{'is-invalid': submitted && f.price.errors}"/>
+            <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+              <div *ngIf="f.price.errors.required">Enter Price</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Description</label>
+            <input type="text" formControlName="description" class="form-control" [ngClass]="{'is-invalid': submitted && f.description.errors}"/>
+            <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+              <div *ngIf="f.description.errors.required">Write Description</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-success">Item Generate</button>&nbsp;&nbsp;&nbsp;
+            <button type="reset" class="btn btn-secondary">Cancel</button>&nbsp;&nbsp;&nbsp;
+          </div>
+          </form>
+          </div>
+          </div>
+          </div>
+          </div>
+          

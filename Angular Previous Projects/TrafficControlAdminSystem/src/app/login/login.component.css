@@ -1,0 +1,12 @@
+.sri{
+    background-color: rgba(240, 186, 170, 0.849);
+    position: relative;
+    margin-top:10px;
+    height: 300px;
+    width:300px;
+    padding: 40px;
+    right: 100px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.9);
+    border: 3px solid #aaa;
+
+}

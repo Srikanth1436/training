@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg ">
+    <div class=" navbar-collapse " >
+    
+    <a class="nav-item nav-link active" routerLink='/user/dashboard' >Home&#X2302;</a>
+    <a class="nav-item nav-link"routerLink='/user/cart'>Cart&#x1F6D;</a>
+    <a class="nav-item nav-link" routerLink='/user/orders'>Orders&#9776;</a>
+
+    </div>
+    <button class="btn btn-success btn-sm">{{display|uppercase|wel}}</button>&nbsp;&nbsp;&nbsp;
+
+    
+    <button class="btn btn-primary" (click)="service1.logout()">Logout</button>
+    </nav>
+    
+
+<br>
+<br>
+<div class="jumbotron">
+            <nav class="navbar navbar-expand-lg ">
+
+  <button routerLink='/user/shirts'  class="btn btn-primary btn-block">Shirts</button>&nbsp;&nbsp;
+    <button routerLink='/user/jeans' class="btn btn-secondary btn-block">Jeans</button>&nbsp;&nbsp;
+    <button routerLink='/user/shoes'  class="btn btn-info btn-block">Shoes</button>
+    </nav>
+</div>
+
+

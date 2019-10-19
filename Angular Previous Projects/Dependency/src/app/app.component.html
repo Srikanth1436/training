@@ -1,0 +1,20 @@
+
+<h1>Student Details</h1>
+<h3>First Service</h3>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+  </tr>
+  <tr *ngFor="let name of names" >
+    <td>{{name.id}}</td>
+    <td>{{name.name}}</td>
+  </tr> 
+</table>
+<h3>Second Service</h3>
+
+<ul *ngFor="let content of Content">
+  <li>{{content.content}}</li>
+</ul>
+<a routerLink='/inside'>Content</a>
+<router-outlet></router-outlet>

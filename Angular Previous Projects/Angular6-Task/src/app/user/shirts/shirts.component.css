@@ -1,0 +1,20 @@
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+  }
+  
+  th, td {
+    padding: 2px;
+    text-align: left;
+    border-bottom: 1px solid rgb(101, 136, 233);
+  }
+  
+  tr:hover {background-color:#ebc4c4;}
+
+nav{
+    background-color: bisque;
+}
+.s{
+    width:700px;
+} 

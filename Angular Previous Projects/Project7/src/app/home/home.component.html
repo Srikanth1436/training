@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <style>
+   
+
+.jumbotron{
+    background-color: rgb(128, 149, 241);
+}   
+            
+            </style>
+    </head>
+<body>
+    <div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-mod-8 offset-md-2">
+               
+<h1>Hi {{currentUser.firstName}}!</h1>
+<br>
+<p>You're logged in Thrymr!!</p>
+<br>
+<h3>All registered users:</h3>
+<ul>
+    <li *ngFor="let user of users">
+        {{user.username}} ({{user.firstName}} {{user.lastName}})
+        - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
+    </li>
+</ul>
+<p><a [routerLink]="['/login']">Logout</a></p>
+   
+</div>
+</div>
+</div>
+ 
+</div>
+         
+</body>
+</html>

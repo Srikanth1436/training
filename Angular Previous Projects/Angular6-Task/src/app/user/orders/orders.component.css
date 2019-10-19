@@ -1,0 +1,40 @@
+
+
+nav{
+    background-color: bisque;
+}
+.s{
+    width:700px;
+} 
+.form-control{
+width: 300px;;
+}
+p{
+    color:red;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 2px;
+    text-align: left;
+    border-bottom: 1px solid rgb(101, 136, 233);
+  }
+  
+  tr:hover {background-color:#ebc4c4;}
+  .searchresults{
+    width:70%;
+   font-size: 100%;
+   color:blue;
+  }
+
+
+
+
+  input[type=text]{
+    background-color: aqua;
+  }
+ 

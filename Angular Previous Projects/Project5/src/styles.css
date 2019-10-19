@@ -1,0 +1,36 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background: rgb(245, 239, 245);
+    font-size: 16px;
+    color: #777;
+    font-family: sans-serif;
+    font-weight: 300;
+}
+
+#login-box
+{
+    position: relative;
+    margin: 1% auto;
+    height: 1150px;
+    width:500px;
+    background: rgb(241, 243, 243);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.9);
+    border: 3px solid #aaa;
+
+}
+
+.left-box
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 500px;
+    height: 450px;    
+}
+h1{
+    text-align: center;
+}

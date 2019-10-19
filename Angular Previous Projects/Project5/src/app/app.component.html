@@ -1,0 +1,100 @@
+<html>
+  <body>
+   
+  <div id="login-box">
+ <div class="left-box"> 
+
+
+<div class="container-fluid">
+    <h2>SignUp Form</h2>
+    
+    <form #userForm="ngForm" *ngIf="!submitted" (ngSubmit)="onSubmit()" novalidate>
+      
+      <div class="form-group">
+        <label>First Name</label>
+        <input type="text" #fname="ngModel" required class="form-control" [class.is-invalid]="fname.invalid && fname.touched" name="fname" [(ngModel)]="userModel.fname">
+        <small class="text-danger" [class.d-none]="fname.valid || fname.untouched">Enter First Name</small>
+      </div>
+      <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" #lname="ngModel" required class="form-control" [class.is-invalid]="lname.invalid && lname.touched" name="lname" [(ngModel)]="userModel.lname">
+          <small class="text-danger" [class.d-none]="lname.valid || lname.untouched">Enter Last Name</small>
+        </div>
+        <div class="form-group">
+            <label>User Name</label>
+            <input type="text" #uname="ngModel" required class="form-control" [class.is-invalid]="uname.invalid && uname.touched" name="uname" [(ngModel)]="userModel.uname">
+            <small class="text-danger" [class.d-none]="uname.valid || uname.untouched">Enter User Name</small>
+          </div>
+          <div class="mb-3">
+              <label>Gender</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" value="Male" [(ngModel)]="userModel.gender">
+                <label class="form-check-label">Male</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" value="Female" [(ngModel)]="userModel.gender">
+                <label class="form-check-label">Female</label>
+              </div>
+            </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" #email="ngModel" required class="form-control" name="email" [(ngModel)]="userModel.email" [class.is-invalid]="email.invalid && email.touched" [(ngModel)]="userModel.email">
+        <small class="text-danger" [class.d-none]="email.valid || email.untouched">Enter Email</small>
+      </div>
+  
+      <div class="form-group">
+        <label>Phone</label>
+        <input type="tel" #phone="ngModel" required pattern="^\d{10}$" class="form-control" [class.is-invalid]="phone.invalid && phone.touched" name="phone" [(ngModel)]="userModel.phone">
+        <!-- <small class="text-danger" [class.d-none]="phone.valid || phone.untouched">Phone number must be 10 digits</small> -->
+        <div *ngIf="phone.errors && (phone.invalid || phone.touched)">
+          <small class="text-danger" *ngIf="phone.errors.required">Enter Phone Number</small>      
+          <small class="text-danger" *ngIf="phone.errors.pattern">Phone number must be 10 digits</small>      
+        </div>
+      </div>
+  
+      <div class="form-group">
+          <label>Position</label>
+          <select class="custom-select" #position="ngModel" [(ngModel)]="userModel.position" required>
+          <option selected>Choose Position</option>
+          <option *ngFor="let Position of Position">{{Position}}</option>
+          </select>
+          </div>
+  
+      
+      <div class="form-group">
+          <label>Password</label>
+          <input type="password" class="form-control" #password="ngModel"  [(ngModel)]="userModel.password"[class.is-invalid]="password.invalid&&password.touched" required>
+          <small [class.d-none]="password.valid||password.untouched" class="text-danger">Enter Password</small>
+        </div>
+       <!--  {{password.className}}-->
+    
+        <div class="form-group">
+          <label>Confirm Password</label>
+          <input type="password" class="form-control" #password2="ngModel"  [(ngModel)]="userModel.password2"[class.is-invalid]="password2.invalid&&password2.touched" required>
+          <small [class.d-none]="password2.valid||password2.untouched" class="text-danger">Confirm Password</small>
+        </div>
+       <!--  {{password2.className}}-->
+    
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" name="subscribe" [(ngModel)]="userModel.subscribe">
+        <label class="form-check-label">
+          Accept Terms & Conditions
+        </label>
+      </div>
+  
+      <button  class="btn btn-primary"  type="submit" >Submit form</button>
+      &nbsp;&nbsp;&nbsp;<input type="reset" class="btn btn-primary" value="Cancel">
+
+    </form>
+    
+  </div>
+
+
+
+
+
+
+
+
+
+

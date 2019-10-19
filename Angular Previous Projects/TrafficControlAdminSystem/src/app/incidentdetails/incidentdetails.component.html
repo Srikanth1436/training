@@ -1,0 +1,38 @@
+
+<div class="bs-example">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a routerLink='/home' class="navbar-brand">Home</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a routerLink='/user' class="nav-item nav-link">Create User</a>
+                <a routerLink='/incident' class="nav-item nav-link">Generate Incident</a>
+               <a routerLink='/userdetails' class="nav-item nav-link">View Users</a>
+               <a routerLink='/incidentdetails' style="color: blue;" class="nav-item nav-link disabled active" tabindex="-1" >View Incidents</a>
+            </div>
+            
+        </div>
+    </nav>
+</div>                          
+
+<!--<button routerLink="/home" class="btn btn-primary">Home</button>-->
+<h2>All Incident Details</h2><br>
+<table>
+    <tr>
+    <th>S.No</th>
+    <th>Id&nbsp;&nbsp;&nbsp;Name</th>
+    <th>Incident Details</th>
+    <th>Date</th>
+    <th>Place/Control</th>
+    </tr>
+    <tr *ngFor="let inc of incdata;index as i">
+        <td>{{i+1}}</td>
+        <td>{{inc.name}}</td>
+        <td>{{inc.incident}}</td>
+        <td>{{inc.date1}}</td>
+        <td>{{inc.place}}</td>
+    </tr>
+</table>

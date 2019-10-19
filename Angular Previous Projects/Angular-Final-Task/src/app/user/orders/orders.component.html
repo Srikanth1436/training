@@ -1,0 +1,112 @@
+<nav class="navbar navbar-expand-lg ">
+    <div class=" navbar-collapse " >
+    
+    <a class="nav-item nav-link active" routerLink='/user/dashboard' >Home&#X2302;</a>
+    <a class="nav-item nav-link"routerLink='/user/cart'>Cart&#128722;</a>
+    <a class="nav-item nav-link" routerLink='/user/orders'>Orders&#9776;</a>
+    </div>
+    
+  
+    <input type="text" placeholder="First Date" name="date1"   [(ngModel)]="firstDate" 
+    bsDatepicker >
+<input type="text" placeholder="Second Date" [minDate]="firstDate"   name="date1" [isDisabled]="!firstDate"
+  [(ngModel)]="secondDate" bsDatepicker>
+    
+  <button class="btn btn-secondary" (click)="search()">Search</button>
+
+</nav>
+
+<br>
+<br>
+<div class="main">
+  
+        
+        <div class="form-group has-search">
+          <span class="fa fa-search form-control-feedback"></span>
+          <input type="number" class="form-control" placeholder="Search Order" #id
+           (keyup.enter)="searchid(id.value); id.value=''">
+        </div>
+</div> 
+<div class="searchresults"><table>
+        <tr *ngFor="let ss of searcharray">
+        <td>{{ss.id}}</td>
+        <td>{{ss.expected|date}}</td>
+        <td>{{ss.brand}}</td>
+        <td>{{ss.size}}</td>
+        <td>{{ss.price}}</td>
+        <td>{{ss.description}}</td>
+            </tr>
+        </table>
+        
+        <p>{{search}}</p>
+        
+        </div>
+
+
+                    
+<h2>All Ordered Items</h2>
+  <table>
+        <tr>
+            <th>S.No</th>
+            <th>Ordered Date</th>
+            <th>Order Id</th>
+            <th>Brand Name</th>
+            <th>Sizes</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let lp of myordersdata;index as i" >
+            <td>{{i+1}}</td>
+            <td>{{lp.orderdate}</td>
+    <td>{{lp.id}}</td>
+    <td>{{lp.brand}}</td>
+    <td>{{lp.size}}</td>
+    <td>{{lp.price}}</td>
+    <td>{{lp.description}}</td>
+    <td><button (click)="delete(i)" class="btn btn-primary btn-sm">Cancel Item</button></td>
+    </tr>
+    </table>
+    
+      <!--
+          <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+  <h2>All Ordered Items</h2>
+  <table>
+        <tr>
+            <th>S.no</th>
+            <th>Brand Name</th>
+            <th>Sizes</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Choose</th>
+        </tr>
+        <tr *ngFor="let lp4 of cart.myshirts;index as i" >
+    <td>{{i+1}}{{orderdate|date:'_yyyy'}}</td>
+    <td>{{lp4.brand}}</td>
+    <td>{{lp4.size}}</td>
+    <td>{{lp4.price}}</td>
+    <td>{{lp4.description}}</td>
+    <td><button (click)="del4(lp4)" class="btn btn-primary btn-sm">Cancel Item</button></td>
+    
+  
+    <tr *ngFor="let lp5 of cart.myjeans;index as i">
+        <td>{{i+1}}{{orderdate|date:'_yyyy'}}</td>
+<td>{{lp5.brand}}</td>
+<td>{{lp5.size}}</td>
+<td>{{lp5.price}}</td>
+<td>{{lp5.description}}</td>
+<td><button (click)="del5(lp5)" class="btn btn-primary btn-sm">Cancel Item</button></td>
+
+    </tr>
+       
+        <tr *ngFor="let lp6 of cart.myshoes;index as i">
+            <td>{{i+1}}{{orderdate|date:'_yyyy'}}</td>
+            <td>{{lp6.brand}}</td>
+    <td>{{lp6.size}}</td>
+    <td>{{lp6.price}}</td>
+    <td>{{lp6.description}}</td>
+    <td><button (click)="del6(lp6)" class="btn btn-primary btn-sm">Cancel Item</button></td>
+    
+        </tr>
+      </table>
+      -->

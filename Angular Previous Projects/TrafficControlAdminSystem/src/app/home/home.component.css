@@ -1,0 +1,11 @@
+.navbar{
+    background-color: rgba(248, 143, 110, 0.849);
+    position: relative;
+    height: 10px;
+    width:100%;
+    padding: 30px;
+    right: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.9);
+    border: 3px solid rgb(212, 115, 115);
+
+}
