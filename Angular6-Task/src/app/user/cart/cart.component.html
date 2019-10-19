@@ -1,0 +1,56 @@
+
+  <nav class="navbar navbar-expand-lg ">
+        <div class=" navbar-collapse " >
+        
+        <a class="nav-item nav-link active" routerLink='/user/dashboard' >Home&#X2302;</a>
+        <a class="nav-item nav-link"routerLink='/user/cart'>Cart&#128722;</a>
+        <a class="nav-item nav-link" routerLink='/user/orders'>Orders&#9776;</a>
+        </div>
+        
+        <button class="btn btn-primary" (click)="service1.logout()">Logout</button>
+        </nav>
+        
+    <br>
+    <br>
+    
+    
+      <h2>All Cart  Items</h2>
+      <table>
+            <tr>
+                <th>Quantity</th>
+                <th>Brand Name</th>
+                <th>Sizes</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Choose</th>
+            </tr>
+            <tr *ngFor="let lp1 of shirtsservice.myshirtsPurchaseList;index as i">
+        <td>{{i+1}}</td>
+        <td>{{lp1.brand}}</td>
+        <td>{{lp1.size}}</td>
+        <td>{{lp1.price}}</td>
+        <td>{{lp1.description}}</td>
+        <td><button (click)="pay1(lp1)" class="btn btn-success btn-sm">Pay</button></td>
+        
+            </tr>
+     
+        <tr *ngFor="let lp2 of jeansservice.myjeansPurchaseList;index as i">
+    <td>{{i+1}}</td>
+    <td>{{lp2.brand}}</td>
+    <td>{{lp2.size}}</td>
+    <td>{{lp2.price}}</td>
+    <td>{{lp2.description}}</td>
+    <td><button (click)="pay2(lp2)" class="btn btn-success btn-sm">Pay</button></td>
+    
+        </tr>
+
+            <tr *ngFor="let lp3 of shoesservice.myshoesPurchaseList;index as i">
+        <td>{{i+1}}</td>
+        <td>{{lp3.brand}}</td>
+        <td>{{lp3.size}}</td>
+        <td>{{lp3.price}}</td>
+        <td>{{lp3.description}}</td>
+        <td><button (click)="pay3(lp3)" class="btn btn-success btn-sm">Pay</button></td>
+        
+            </tr>
+          </table>

@@ -1,0 +1,77 @@
+<nav class="navbar navbar-expand-lg ">
+    <div class=" navbar-collapse " >
+    
+    <a class="nav-item nav-link active" routerLink='/user/dashboard' >Home&#X2302;</a>
+    <a class="nav-item nav-link"routerLink='/user/cart'>Cart&#128722;</a>
+    <a class="nav-item nav-link" routerLink='/user/orders'>Orders&#9776;</a>
+    </div>
+    
+    <button class="btn btn-primary" (click)="service1.logout()">Logout</button>
+    </nav>
+    
+<br>
+<br>
+<input class="form-control" type="text" placeholder="Search" aria-label="Search">
+  <h2>All Shirt Items</h2>
+  <table>
+        <tr>
+            <th>S.no</th>
+            <th>Brand Name</th>
+            <th>Sizes</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Choose</th>
+        </tr>
+        <tr *ngFor="let lp4 of cart.myshirts;index as i">
+    <td>{{i+1}}</td>
+    <td>{{lp4.brand}}</td>
+    <td>{{lp4.size}}</td>
+    <td>{{lp4.price}}</td>
+    <td>{{lp4.description}}</td>
+    <td><button (click)="del4(lp4)" class="btn btn-primary btn-sm">Cancel Item</button></td>
+    
+        </tr>
+      </table>
+
+      <br>
+      <h1>All Jeans Items</h1>
+<table>
+    <tr>
+        <th>S.no</th>
+        <th>Brand Name</th>
+        <th>Sizes</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Choose</th>
+    </tr>
+    <tr *ngFor="let lp5 of cart.myjeans;index as i">
+<td>{{i+1}}</td>
+<td>{{lp5.brand}}</td>
+<td>{{lp5.size}}</td>
+<td>{{lp5.price}}</td>
+<td>{{lp5.description}}</td>
+<td><button (click)="del5(lp5)" class="btn btn-primary btn-sm">Cancel Item</button></td>
+
+    </tr>
+  </table> 
+<br>
+  <h2>All Shoe Items</h2>
+  <table>
+        <tr>
+            <th>S.no</th>
+            <th>Brand Name</th>
+            <th>Sizes</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Choose</th>
+        </tr>
+        <tr *ngFor="let lp6 of cart.myshoes;index as i">
+    <td>{{i+1}}</td>
+    <td>{{lp6.brand}}</td>
+    <td>{{lp6.size}}</td>
+    <td>{{lp6.price}}</td>
+    <td>{{lp6.description}}</td>
+    <td><button (click)="del6(lp6)" class="btn btn-primary btn-sm">Cancel Item</button></td>
+    
+        </tr>
+      </table>
